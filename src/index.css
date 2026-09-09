@@ -3,15 +3,59 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-surface: 255 255 255;
+    --color-surface-card: 244 246 251;
+    --color-surface-container: 238 242 247;
+    --color-surface-container-high: 232 237 244;
+    --color-border: 226 232 240;
+    --color-text: 17 19 24;
+    --color-muted: 75 85 101;
+    --color-outline: 100 116 139;
+    --color-outline-variant: 148 163 184;
+    --color-border-alpha: 1;
+    --chart-grid: #e2e8f0;
+    --shadow-navbar: 0 1px 8px rgb(15 23 42 / 0.08);
+    --shadow-hero: 0 8px 20px rgb(15 23 42 / 0.08);
+  }
+
+  .dark {
+    --color-surface: 11 13 18;
+    --color-surface-card: 19 23 32;
+    --color-surface-container: 28 34 45;
+    --color-surface-container-high: 36 43 56;
+    --color-border: 255 255 255;
+    --color-text: 255 255 255;
+    --color-muted: 148 163 184;
+    --color-outline: 148 163 184;
+    --color-outline-variant: 100 116 139;
+    --color-border-alpha: 0.08;
+    --chart-grid: #1c222d;
+    --shadow-navbar: 0 1px 8px rgb(0 0 0 / 0.24);
+    --shadow-hero: 0 8px 20px rgb(0 0 0 / 0.24);
+  }
+
   html {
     scroll-behavior: smooth;
+    background: rgb(var(--color-surface));
   }
   body {
     margin: 0;
-    background: #f9f9ff;
-    color: #1a1b21;
+    background: rgb(var(--color-surface));
+    color: rgb(var(--color-text));
     font-family: Inter, sans-serif;
     overscroll-behavior: none;
+    transition:
+      background-color 200ms ease,
+      color 200ms ease;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-property:
+      color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
   }
   ::-webkit-scrollbar {
     display: none;
@@ -32,6 +76,6 @@
     @apply rounded-full bg-surface-container px-3 py-1 font-body text-label-sm text-on-surface-variant;
   }
   .gradient-button {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary-container via-secondary-container to-tertiary-fixed px-space-lg py-3 font-body text-label-md text-white shadow-[0_4px_14px_rgba(26,115,232,0.25)] transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_6px_20px_rgba(0,210,255,0.4)] active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary-container via-secondary-container to-tertiary-fixed px-space-lg py-3 font-body text-label-md text-white shadow-[0_4px_14px_rgb(26_115_232_/_0.25)] transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_6px_20px_rgb(0_210_255_/_0.4)] active:scale-[0.98];
   }
 }

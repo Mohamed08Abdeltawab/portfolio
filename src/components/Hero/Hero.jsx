@@ -60,7 +60,7 @@ export default function Hero() {
                 />
               </div>
             </div>
-            <div className="absolute -bottom-4 left-1/2 flex w-max -translate-x-1/2 items-center gap-2 rounded-full bg-surface-container-lowest/95 px-4 py-2 shadow-[0_8px_20px_rgba(0,0,0,0.08)] backdrop-blur-md">
+            <div className="absolute -bottom-4 left-1/2 flex w-max -translate-x-1/2 items-center gap-2 rounded-full bg-surface-container-lowest/95 px-4 py-2 shadow-[var(--shadow-hero)] backdrop-blur-md">
               <span className="h-2 w-2 rounded-full bg-primary-container" />
               <span className="font-body text-label-sm font-semibold text-on-surface">
                 C# • ASP.NET Core • React • SQL Server

@@ -17,6 +17,18 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        document.documentElement.classList.toggle(
+          "dark",
+          savedTheme === "dark" || (!savedTheme && prefersDark),
+        );
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

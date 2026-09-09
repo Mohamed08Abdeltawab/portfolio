@@ -9,20 +9,29 @@ export default {
     "ring-primary",
     "ring-secondary",
     "ring-tertiary",
+    "bg-primary",
+    "bg-secondary",
+    "bg-tertiary",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        surface: "#f9f9ff",
-        "surface-container-lowest": "#ffffff",
-        "surface-container-low": "#f3f3fa",
-        "surface-container": "#ededf5",
-        "surface-container-high": "#e8e7ef",
-        "surface-container-highest": "#e2e2e9",
-        "on-surface": "#1a1b21",
-        "on-surface-variant": "#414754",
-        outline: "#727785",
-        "outline-variant": "#c1c6d6",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        "surface-container-lowest":
+          "rgb(var(--color-surface-card) / <alpha-value>)",
+        "surface-container-low":
+          "rgb(var(--color-surface-card) / <alpha-value>)",
+        "surface-container":
+          "rgb(var(--color-surface-container) / <alpha-value>)",
+        "surface-container-high":
+          "rgb(var(--color-surface-container-high) / <alpha-value>)",
+        "surface-container-highest":
+          "rgb(var(--color-border) / var(--color-border-alpha))",
+        "on-surface": "rgb(var(--color-text) / <alpha-value>)",
+        "on-surface-variant": "rgb(var(--color-muted) / <alpha-value>)",
+        outline: "rgb(var(--color-outline) / <alpha-value>)",
+        "outline-variant": "rgb(var(--color-outline-variant) / <alpha-value>)",
         primary: "#005bbf",
         "primary-container": "#1a73e8",
         "primary-fixed": "#d8e2ff",

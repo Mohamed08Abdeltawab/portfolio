@@ -84,7 +84,7 @@ function ContributionChart() {
     >
       <defs>
         <pattern id="grid" height="16" patternUnits="userSpaceOnUse" width="16">
-          <rect fill="#EDF2F7" height="12" rx="3" width="12" />
+          <rect fill="var(--chart-grid)" height="12" rx="3" width="12" />
         </pattern>
       </defs>
       <rect fill="url(#grid)" height="90" width="680" />
