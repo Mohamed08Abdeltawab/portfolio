@@ -1,11 +1,13 @@
 import profileImage from "../../screen.png";
+import programmingAdvicesImage from "../../Programming Advices.jpg";
+import itiImage from "../../ITI.jpg";
 
 export { profileImage };
 
 export const navItems = [
   ["About", "about"],
-  ["Skills", "skills"],
   ["Projects", "featured-projects"],
+  ["Skills", "skills"],
   ["Training", "experience"],
   ["Education", "education"],
   ["Certificates", "achievements"],
@@ -239,6 +241,7 @@ export const certificates = [
     "Programming Advices · July 2026",
     "primary",
     "https://drive.google.com/drive/folders/1O4to7A5zC-EiDi4rkkx2MIdMhUqjkXgX",
+    programmingAdvicesImage,
   ],
   [
     "verified",
@@ -247,6 +250,7 @@ export const certificates = [
     "ITI · September 2025",
     "secondary",
     "https://drive.google.com/file/d/1kYvor8jpHLA-Qu9Az5tAjkUoK49-kc5p/view",
+    itiImage,
   ],
 ];
 

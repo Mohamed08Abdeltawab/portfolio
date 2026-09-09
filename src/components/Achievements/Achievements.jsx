@@ -9,30 +9,45 @@ export default function Achievements() {
         <h2 className="font-headline text-headline-md">Certificates</h2>
       </div>
       <div className="grid h-full grid-cols-1 gap-space-sm sm:grid-cols-2">
-        {certificates.map(([icon, badge, title, subtitle, color, href]) => (
-          <article
-            key={title}
-            className="card flex flex-col justify-between p-space-md"
-          >
-            <div className="flex items-start justify-between">
-              <Icon className={`text-${color} text-headline-sm`}>{icon}</Icon>
+        {certificates.map(
+          ([icon, badge, title, subtitle, color, href, image]) => (
+            <article
+              key={title}
+              className="card flex flex-col justify-between p-space-md"
+            >
               <a
-                className="rounded bg-surface-container px-2 py-0.5 font-body text-[11px] font-bold text-primary transition-colors hover:text-secondary"
+                className="mb-space-md flex h-28 items-center justify-center overflow-hidden rounded-lg bg-surface-container-low p-space-sm"
                 href={href}
                 target="_blank"
                 rel="noreferrer"
+                aria-label={`Open ${title} certificate`}
               >
-                {badge}
+                <img
+                  className="h-24 w-24 shrink-0 rounded-full object-contain transition-transform duration-300 hover:scale-105"
+                  src={image}
+                  alt={`${title} certificate logo`}
+                />
               </a>
-            </div>
-            <div className="mt-space-sm">
-              <h3 className="font-body text-label-md font-bold">{title}</h3>
-              <p className="font-body text-body-sm text-on-surface-variant">
-                {subtitle}
-              </p>
-            </div>
-          </article>
-        ))}
+              <div className="flex items-start justify-between">
+                <Icon className={`text-${color} text-headline-sm`}>{icon}</Icon>
+                <a
+                  className="rounded bg-surface-container px-2 py-0.5 font-body text-[11px] font-bold text-primary transition-colors hover:text-secondary"
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {badge}
+                </a>
+              </div>
+              <div className="mt-space-sm">
+                <h3 className="font-body text-label-md font-bold">{title}</h3>
+                <p className="font-body text-body-sm text-on-surface-variant">
+                  {subtitle}
+                </p>
+              </div>
+            </article>
+          ),
+        )}
       </div>
     </div>
   );
