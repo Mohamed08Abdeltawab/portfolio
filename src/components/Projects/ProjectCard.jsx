@@ -1,5 +1,6 @@
 import { Icon } from "../shared/Icon";
 import { TechBadge } from "../shared/TechBadge";
+import { profile } from "../../data/portfolio";
 export default function ProjectCard({ project, index }) {
   return (
     <article className="card overflow-hidden transition-transform duration-300 hover:-translate-y-1">
@@ -39,27 +40,13 @@ export default function ProjectCard({ project, index }) {
           </div>
           <div className="flex flex-wrap items-center gap-space-md pt-space-sm">
             <a
-              className="inline-flex items-center gap-1 font-body text-label-md font-bold text-primary hover:text-secondary"
-              href="#contact"
-            >
-              Live Demo <Icon className="text-body-sm">north_east</Icon>
-            </a>
-            <a
               className="inline-flex items-center gap-1 font-body text-label-md font-semibold hover:text-primary"
-              href="https://github.com"
+              href={profile.github}
               target="_blank"
               rel="noreferrer"
             >
-              GitHub Repo <Icon className="text-body-sm">north_east</Icon>
+              GitHub Profile <Icon className="text-body-sm">north_east</Icon>
             </a>
-            {index < 2 && (
-              <a
-                className="inline-flex items-center gap-1 font-body text-label-md text-on-surface-variant hover:text-on-surface"
-                href="#about"
-              >
-                Case Study <Icon className="text-body-sm">article</Icon>
-              </a>
-            )}
           </div>
         </div>
         <div className="lg:col-span-5">
@@ -67,7 +54,7 @@ export default function ProjectCard({ project, index }) {
             <img
               className="h-64 w-full object-cover"
               src={project.image}
-              alt={`${project.title} dashboard`}
+              alt={project.title}
             />
             <span className="absolute bottom-3 left-3 rounded-md bg-surface-container-lowest/90 px-3 py-1 font-mono text-label-sm text-on-surface backdrop-blur-sm">
               {project.status}

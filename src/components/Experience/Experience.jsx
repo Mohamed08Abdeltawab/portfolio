@@ -5,8 +5,8 @@ export default function Experience() {
   return (
     <section id="experience" className="py-space-2xl">
       <SectionHeading
-        eyebrow="CAREER TRAJECTORY"
-        title="Professional Experience"
+        eyebrow="TRAINING & INTERNSHIPS"
+        title="Training & Internships"
       />
       <div className="relative space-y-space-xl border-l-2 border-surface-container-highest pl-6 md:pl-8">
         {experience.map((item) => (

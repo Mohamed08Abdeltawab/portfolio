@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { profile } from "../../data/portfolio";
 import { Icon } from "../shared/Icon";
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -9,27 +10,28 @@ export default function Contact() {
           <div className="flex flex-col gap-space-sm">
             <span className="section-kicker">// GET IN TOUCH</span>
             <h2 className="font-headline text-headline-lg leading-tight">
-              Let's build something extraordinary together.
+              Let&apos;s connect.
             </h2>
             <p className="font-body text-body-lg text-on-surface-variant">
-              Looking for an experienced Full-Stack .NET Developer to architect
-              robust backend APIs, lead migrations, or build modern web apps?
-              I'd love to connect.
+              I am open to connecting about back-end .NET development, RESTful
+              APIs, and database-driven applications.
             </p>
             <div className="flex flex-col gap-space-sm pt-space-md">
               <ContactDetail icon="mail" label="Direct Email">
                 <a
-                  href="mailto:david.vance@devmail.io"
+                  href={`mailto:${profile.email}`}
                   className="hover:text-primary"
                 >
-                  david.vance@devmail.io
+                  {profile.email}
                 </a>
               </ContactDetail>
-              <ContactDetail icon="schedule" label="Response Time SLA">
-                &lt; 24 hours guaranteed
+              <ContactDetail icon="phone" label="Phone">
+                <a href={`tel:${profile.phone}`} className="hover:text-primary">
+                  {profile.phone}
+                </a>
               </ContactDetail>
-              <ContactDetail icon="location_on" label="Work Arrangement">
-                Remote / Hybrid (US &amp; EMEA timezones)
+              <ContactDetail icon="location_on" label="Location">
+                {profile.location}
               </ContactDetail>
             </div>
           </div>
@@ -55,7 +57,7 @@ export default function Contact() {
             <Field
               id="subjectLine"
               label="Subject"
-              placeholder="New .NET Contract / Full-Time Inquiry"
+              placeholder="How can we connect?"
             />
             <div className="flex flex-col gap-1.5">
               <label

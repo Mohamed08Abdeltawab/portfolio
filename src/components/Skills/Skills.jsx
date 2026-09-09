@@ -6,9 +6,9 @@ export default function Skills() {
   return (
     <section id="skills" className="py-space-2xl">
       <SectionHeading
-        eyebrow="CAPABILITIES"
-        title="Skills & Technical Ecosystem"
-        description="A deeply curated stack centered around the Microsoft .NET universe, cloud primitives, and modern web application ergonomics."
+        eyebrow="SKILLS"
+        title="Skills & Technologies"
+        description="Technologies and software engineering foundations listed in the CV."
       />
       <div className="grid grid-cols-1 gap-space-md md:grid-cols-2 lg:grid-cols-3">
         {skills.map(([icon, title, color, tags]) => (

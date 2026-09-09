@@ -5,9 +5,9 @@ export default function Projects() {
   return (
     <section id="featured-projects" className="py-space-xl">
       <SectionHeading
-        eyebrow="FEATURED WORK"
-        title="Enterprise .NET Systems & Applications"
-        description="Architectural solutions engineered for scale, transactional reliability, and seamless user interaction across distributed enterprise domains."
+        eyebrow="PROJECTS"
+        title=".NET Applications & Systems"
+        description="Selected applications developed with C#, .NET, Windows Forms, databases, and RESTful APIs."
       />
       <div className="flex flex-col gap-space-xl">
         {projects.map((project, index) => (

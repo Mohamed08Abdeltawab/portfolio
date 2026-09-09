@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { navItems, profileImage } from "../../data/portfolio";
+import { navItems, profile, profileImage } from "../../data/portfolio";
 import { Button } from "../shared/Button";
 import { Icon } from "../shared/Icon";
 
@@ -20,13 +20,13 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-portfolio items-center justify-between gap-space-md px-margin-mobile md:px-space-xl lg:px-margin-desktop">
         <a href="#about" className="flex shrink-0 items-center gap-space-xs">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-container-high font-headline text-headline-sm font-bold text-primary">
-            D
+            M
           </span>
           <span className="flex items-center gap-1.5 font-headline text-headline-sm tracking-tight">
-            <strong>David Vance</strong>
+            <strong>{profile.name}</strong>
             <span className="font-normal text-outline-variant">//</span>
             <span className="hidden font-body text-label-sm font-medium text-on-surface-variant sm:inline">
-              .NET &amp; Cloud
+              .NET Backend
             </span>
           </span>
         </a>
@@ -60,7 +60,7 @@ export default function Navbar() {
           <img
             className="h-8 w-8 rounded-full object-cover ring-2 ring-surface-container-highest"
             src={profileImage}
-            alt="David Vance"
+            alt={profile.name}
           />
         </div>
       </div>

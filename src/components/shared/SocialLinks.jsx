@@ -1,15 +1,11 @@
 import { Icon } from "./Icon";
+import { socialLinks } from "../../data/portfolio";
 export function SocialLinks({ compact = false }) {
-  const links = [
-    { label: "GitHub", href: "https://github.com", icon: "code" },
-    { label: "LinkedIn", href: "https://linkedin.com", icon: "share" },
-    { label: "Email", href: "mailto:david.vance@devmail.io", icon: "mail" },
-  ];
   return (
     <div
       className={`flex ${compact ? "flex-col gap-space-xs" : "flex-wrap items-center gap-space-xs"}`}
     >
-      {links.map((link) => (
+      {socialLinks.map((link) => (
         <a
           key={link.label}
           className={

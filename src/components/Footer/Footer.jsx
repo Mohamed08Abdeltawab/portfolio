@@ -1,4 +1,4 @@
-import { navItems } from "../../data/portfolio";
+import { navItems, profile } from "../../data/portfolio";
 import { SocialLinks } from "../shared/SocialLinks";
 export default function Footer() {
   return (
@@ -8,20 +8,19 @@ export default function Footer() {
           <div className="flex flex-col gap-space-sm md:col-span-5">
             <div className="flex items-center gap-space-xs">
               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-surface-container-high font-headline text-headline-sm font-bold text-primary">
-                D
+                M
               </span>
               <strong className="font-headline text-headline-sm">
-                David Vance
+                {profile.name}
               </strong>
             </div>
             <p className="max-w-sm font-body text-body-sm text-on-surface-variant">
-              Full-Stack .NET Engineer specializing in high-throughput cloud
-              architectures, distributed systems, and resilient enterprise
-              applications.
+              {profile.title} building RESTful APIs and database-driven
+              applications with C# and ASP.NET Core.
             </p>
             <span className="w-max rounded-full bg-tertiary-fixed/30 px-space-sm py-1 font-body text-label-sm">
               <span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-tertiary-container" />
-              Available for select opportunities
+              Based in {profile.location}
             </span>
           </div>
           <div className="flex flex-col gap-space-xs md:col-span-4">
@@ -48,8 +47,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-space-2xl flex flex-col items-center justify-between gap-space-sm border-t border-surface-container-high pt-space-lg font-body text-body-sm text-outline sm:flex-row">
-          <p>© 2025 David Vance. All rights reserved.</p>
-          <p>Crafted with C#, ASP.NET Core &amp; Modern Web Tech</p>
+          <p>© 2026 {profile.name}. All rights reserved.</p>
+          <p>Built with React, C#, and ASP.NET Core</p>
         </div>
       </div>
     </footer>

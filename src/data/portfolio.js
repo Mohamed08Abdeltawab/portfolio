@@ -6,220 +6,253 @@ export const navItems = [
   ["About", "about"],
   ["Skills", "skills"],
   ["Projects", "featured-projects"],
-  ["Experience", "experience"],
+  ["Training", "experience"],
   ["Education", "education"],
-  ["Achievements", "achievements"],
+  ["Certificates", "achievements"],
   ["GitHub", "github"],
   ["Contact", "contact"],
 ];
 
 export const socialLinks = [
-  { label: "GitHub", href: "https://github.com", icon: "code" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "share" },
-  { label: "Email", href: "mailto:david.vance@devmail.io", icon: "mail" },
+  {
+    label: "GitHub",
+    href: "https://github.com/Mohamed08Abdeltawab",
+    icon: "code",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/mohamed-abdeltawab-bb26aa316",
+    icon: "share",
+  },
+  { label: "Email", href: "mailto:mohamedzidan0999@gmail.com", icon: "mail" },
 ];
 
 export const metrics = [
-  ["5+", "Years Experience"],
-  ["500k+", "Daily Transactions"],
-  ["99.9%", "API Uptime SLA"],
-  ["sub-15ms", "Core Latency"],
+  ["2023", "University Started"],
+  ["4", "Projects"],
+  ["4", "Training Programs"],
+  ["2", "Certificates"],
 ];
+
+export const profile = {
+  name: "Mohamed Abdeltawab",
+  title: "Back-end .NET Developer",
+  email: "mohamedzidan0999@gmail.com",
+  phone: "+201065712366",
+  location: "Egypt",
+  github: "https://github.com/Mohamed08Abdeltawab",
+  linkedin: "https://linkedin.com/in/mohamed-abdeltawab-bb26aa316",
+  summary:
+    "Junior .NET Backend Developer building RESTful APIs and database-driven applications with C# and ASP.NET Core.",
+};
+
+export const about = {
+  heading: "Building reliable .NET backend applications.",
+  paragraphs: [
+    "Junior .NET Backend Developer with hands-on experience building RESTful APIs and database-driven applications using C# and ASP.NET Core.",
+    "Experienced with Entity Framework Core, SQL Server, ADO.NET, LINQ, and ASP.NET MVC, with a strong foundation in OOP, SOLID principles, and clean code.",
+  ],
+  highlights: ["OOP", "SOLID Principles", "Clean Code"],
+};
 
 export const projects = [
   {
-    category: "Fintech Architecture",
-    meta: "// High Volume",
-    title: "OmniPay // Core Financial Clearing Engine",
+    category: "ASP.NET Core Web API",
+    meta: "// July 2026",
+    title: "CRUD Application",
     description:
-      "Re-architected high-volume payment processing from a legacy monolithic pipeline to asynchronous, event-driven .NET 8 microservices handling high concurrency with zero loss.",
+      "Developed a RESTful Web API implementing CRUD operations for a database-driven application.",
     features: [
-      "Transactional Outbox for absolute idempotency",
-      "Sub-15ms p99 transaction authorization",
-      "Circuit Breakers & retries via Polly",
-      "Distributed locks powered by Redis",
+      "RESTful Web API",
+      "Database-driven application",
+      "Entity Framework Core and LINQ",
+      "SQL Server data access",
     ],
-    tags: [
-      "C#",
-      "ASP.NET Core",
-      "EF Core",
-      "RabbitMQ",
-      "SQL Server",
-      "Redis",
-      "Docker",
-    ],
+    tags: ["C#", "ASP.NET Core", "Entity Framework Core", "LINQ", "SQL Server"],
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDFIu5PuexebZ9KecJuMkXQ_WCsU0XVkguHzkGOBZEwpvQwOPL8paF9nrIv8YF6oNWTv-Yz5sDjggBL8YdQy2JcKEfB5pTezcj9_idvzsdBIw_yVmQatFX2P_O6nZt4Whd32LVm-nLA-IhEQCw8NIddQ0CR1a6Lb3fqicaD7KYdgc-8C96kmHyLBKcOKJ_8tstjSH0M6AFjHh0p0Sh6ywcVuGcn1MDDtG3opvBqTkcZ-6UJGjftb2lKGQ",
-    status: "Throughput: 14,200 req/s",
+    status: "July 2026",
     accent: "primary",
   },
   {
-    category: "HealthTech & IoT",
-    meta: "// HIPAA Compliant",
-    title: "HealthPulse // Clinical Telemetry & EHR Platform",
+    category: "Windows Forms",
+    meta: "// April — May 2026",
+    title: "Cashier System (POS)",
     description:
-      "HIPAA-compliant real-time patient monitoring platform unifying medical telemetry streams for intensive care units, delivering instantaneous biometric alerts to medical staff.",
+      "Developed a Windows Forms POS application for managing restaurant sales, products, customers, cashier sessions, and administrative reports.",
     features: [
-      "SignalR WebSockets for real-time vitals",
-      "Granular RBAC with hardened JWT tokens",
-      "Clean Architecture with MediatR CQRS",
-      "Sub-second hospital telemetry alerts",
+      "Restaurant sales management",
+      "Products and customer management",
+      "Cashier sessions",
+      "Administrative reports",
     ],
     tags: [
       "C#",
-      ".NET 8 Web API",
-      "React",
-      "TypeScript",
-      "SQL Server",
-      "Azure App Services",
+      "Windows Forms",
+      ".NET Framework 4.8",
+      "SQLite",
+      "System.Data.SQLite",
     ],
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBIO_MM4zCVt52EuHkW-u8Pny90DKv9UjIOGtQQcrtmpJPiNJmnkKJUZ7EuPWvH_mcpKMa7EBG2xwYmWFrYC5BQ7OpZf4Lm1Hx9NOoTp15k8Qs9yEFEu_4UhbAn6Y9prZt2DxNCpUlpG3CItoFOnhjX-TUcywF3oMMmkoRLT6qNTzeRgWmNfNOBZgxJ_I6WtKnAQV9yH_T2VE6j0Co1b5uRfVX7gz6HipxsbflJ1vt9hrsSe8PS4BqIaA",
-    status: "SignalR Live Stream: Connected",
+    status: "April — May 2026",
     accent: "secondary",
   },
   {
-    category: "Supply Chain & Logistics",
-    meta: "// Multi-tenant",
-    title: "LogiTrack // Supply Chain Inventory Orchestrator",
+    category: "Desktop Application",
+    meta: "// February — April 2026",
+    title: "Clinic Management System",
     description:
-      "Multi-tenant warehouse management system tracking 2M+ SKU inventory shifts across 14 regional fulfillment centers with automated replenishment scheduling and fleet dispatching.",
+      "Developed a desktop clinic management system for managing patients, doctors, appointments, prescriptions, medical services, and billing.",
     features: [
-      "Optimistic concurrency controls for SKU safety",
-      "High-speed LINQ aggregations over indexed sets",
-      "Automated background workers with Quartz.NET",
-      "Comprehensive audit logging & event capture",
+      "Patients and doctors",
+      "Appointments and prescriptions",
+      "Medical services",
+      "Billing management",
     ],
     tags: [
       "C#",
-      "ASP.NET Core",
-      "EF Core",
+      "Windows Forms",
+      ".NET Framework 4.8",
       "SQL Server",
-      "Tailwind CSS",
-      "Docker",
+      "ADO.NET",
     ],
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAOj8tov3qK3F08ugZHIm-NigT14FOpqSBUJc5JlrYmB9DRNxc9zEZ0ZUl_DaFwLOGQ6swqFXxVFPJLhFwAVcxujOdK-hpVxDMdaHPhUE-yK29zQ0DSK2UeN2o-uGG7vD-LnYSIuS_Wy7f9lEfWW5RsbdAlFt4y6wNQxPBtI1S_S6uTcaA8o6gnqyJF0R7GfBDfRGueerVnQgzoo2wc6IYF56EnMBhuhVRVuQ32C8bFZxKa2qsBWrH1lA",
-    status: "Active SKUs: 2,148,090",
+    status: "February — April 2026",
     accent: "primary",
   },
 ];
 
 export const skills = [
-  [
-    "terminal",
-    "Languages",
-    "primary",
-    ["C# (.NET 8/9)", "TypeScript", "JavaScript (ES6+)", "SQL / T-SQL"],
-  ],
+  ["terminal", "Languages", "primary", ["C#", "SQL", "T-SQL", "C++"]],
   [
     "dns",
     "Backend & API",
     "secondary",
     [
       "ASP.NET Core",
-      "RESTful Web APIs",
-      "Entity Framework Core",
-      "Minimal APIs",
-      "SignalR WebSockets",
+      "ASP.NET MVC",
+      "Web API",
+      "RESTful APIs",
+      "Entity Framework",
+      "ADO.NET",
     ],
   ],
   [
     "devices",
     "Frontend",
     "tertiary",
-    ["React", "Vite", "Next.js", "Tailwind CSS", "HTML5 & CSS3"],
+    ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS"],
   ],
   [
     "database",
     "Database & Caching",
     "primary",
-    [
-      "Microsoft SQL Server",
-      "PostgreSQL",
-      "Redis Distributed Cache",
-      "T-SQL Optimization",
-    ],
+    ["SQL Server", "SQLite", "PostgreSQL"],
   ],
-  [
-    "build",
-    "Tools & DevOps",
-    "secondary",
-    [
-      "Git & GitHub",
-      "GitHub Actions",
-      "Docker Containers",
-      "Azure DevOps",
-      "Postman",
-      "IIS Web Server",
-    ],
-  ],
+  ["build", "Tools", "secondary", ["Git", "GitHub"]],
   [
     "architecture",
     "Architecture & Core",
     "tertiary",
     [
-      "Clean Architecture",
-      "CQRS & MediatR",
+      "OOP",
+      "Data Structures & Algorithms",
+      "System Design",
+      "Three-Tier Architecture",
       "SOLID Principles",
-      "LINQ Query Optimization",
-      "Dependency Injection",
-      "JWT & OAuth2",
+      "Clean Code",
     ],
   ],
 ];
 
 export const experience = [
   {
-    role: "Senior Full-Stack .NET Engineer",
-    date: "2022 — Present",
-    company: "TechLogix Solutions",
+    role: "Full-Stack .NET Web Developer",
+    date: "July 2026 — Present",
+    company: "DEPI",
     color: "primary",
     bullets: [
-      "Led comprehensive architectural migration of legacy ASP.NET MVC monolithic backends to decoupled ASP.NET Core Web APIs and modular frontends.",
-      "Established Clean Architecture paradigms, code review standards, and automated unit testing suites adopted across a squad of 6 engineers.",
-      "Decreased mission-critical API response latencies by 42% through structured query optimization and Redis memory caching.",
-      "Designed automated CI/CD deployment pipelines on Azure with zero downtime rollouts and robust rollback hooks.",
+      "Full-Stack .NET Web Development training focused on C#, ASP.NET Core, Entity Framework Core, SQL Server, RESTful APIs, and React.js.",
     ],
-    tags: ["C#", "ASP.NET Core", "EF Core", "SQL Server", "React", "Docker"],
+    tags: [
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "SQL Server",
+      "RESTful APIs",
+      "React.js",
+    ],
   },
   {
-    role: ".NET Backend Developer",
-    date: "2020 — 2022",
-    company: "Apex Financial Systems",
+    role: "Programming Advices — Software Development Training",
+    date: "September 2024 — July 2026",
+    company: "Programming Advices",
     color: "secondary",
     bullets: [
-      "Implemented hardened, high-throughput REST APIs secured with JWT auth, managing payment feeds exceeding 500k+ daily transactions.",
-      "Partnered directly with DBAs to optimize complex EF Core LINQ queries, indexes, and high-frequency transactions with Dapper.",
-      "Engineered zero-downtime database schema migrations and data sanitization routines across production nodes.",
+      "Programming training covering programming fundamentals, problem-solving, software development principles, SOLID principles, and clean code practices through practical exercises and projects.",
     ],
-    tags: ["C#", "Web API", "SQL Server", "Redis", "Git"],
+    tags: [
+      "Programming Fundamentals",
+      "Problem Solving",
+      "SOLID",
+      "Clean Code",
+    ],
   },
   {
-    role: "Full-Stack .NET Apprenticeship & Training",
-    date: "2019 — 2020",
-    company: "Enterprise Software Institute",
+    role: "Web Development using React JS",
+    date: "August 2026 — September 2026",
+    company: "ITI",
     color: "tertiary",
     description:
-      "Intensive, project-driven immersive training focusing on object-oriented programming in C#, relational schema modeling, Clean Code practices, and modern client-side architectures.",
+      "Web Development training focused on React.js, JavaScript, HTML, CSS, and responsive web development.",
+    tags: [
+      "React.js",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Responsive Web Development",
+    ],
+  },
+  {
+    role: ".NET Web Development",
+    date: "August 2025 — September 2025",
+    company: "ITI",
+    description:
+      ".NET Web Development training focused on C#, ASP.NET Core, Entity Framework Core, SQL Server, and RESTful APIs.",
+    tags: [
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "SQL Server",
+      "RESTful APIs",
+    ],
   },
 ];
 
-export const repositories = [
+export const certificates = [
   [
-    "DotNet-CleanArchitecture-Boilerplate",
-    "Production-ready enterprise starter template implementing Clean Architecture, MediatR, FluentValidation, and EF Core multitenancy.",
-    "C# 89%",
-    "56",
-    "14",
-    "terminal",
+    "school",
+    "Link",
+    "Programming & Software Development Roadmap",
+    "Programming Advices · July 2026",
+    "primary",
   ],
   [
-    "FastLinq-Extensions",
-    "Zero-allocation extension methods for high-frequency LINQ queries and memory-conscious struct enumerations in .NET 8.",
-    "C# 98%",
-    "29",
-    "7",
-    "speed",
+    "verified",
+    "Link",
+    ".NET Web Development",
+    "ITI · September 2025",
+    "secondary",
   ],
 ];
+
+export const education = {
+  degree: "B.Sc. of Computer Science",
+  institution: "Fayoum University",
+  faculty: "Faculty of Computers and Artificial Intelligence (FCAI)",
+  date: "October 2023 — Present",
+};
+
+export const languages = ["Arabic — Native", "English — Proficient"];
