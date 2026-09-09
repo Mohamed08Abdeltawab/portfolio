@@ -1,8 +1,63 @@
 import { useState } from "react";
 import { profile } from "../../data/portfolio";
 import { Icon } from "../shared/Icon";
+
+const initialForm = {
+  fullName: "",
+  emailAddr: "",
+  subjectLine: "",
+  messageBody: "",
+};
+
 export default function Contact() {
-  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState({ type: "idle", message: "" });
+
+  function handleChange(event) {
+    const { id, value } = event.target;
+    setForm((currentForm) => ({ ...currentForm, [id]: value }));
+    if (status.type !== "idle") {
+      setStatus({ type: "idle", message: "" });
+    }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const values = Object.fromEntries(
+      Object.entries(form).map(([key, value]) => [key, value.trim()]),
+    );
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (Object.values(values).some((value) => !value)) {
+      setStatus({
+        type: "error",
+        message: "Please complete all fields before sending your message.",
+      });
+      return;
+    }
+
+    if (!emailPattern.test(values.emailAddr)) {
+      setStatus({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    const subject = encodeURIComponent(values.subjectLine);
+    const body = encodeURIComponent(
+      `Name: ${values.fullName}\nEmail: ${values.emailAddr}\n\n${values.messageBody}`,
+    );
+
+    setForm(initialForm);
+    setStatus({
+      type: "success",
+      message: "Your email app is opening with your message ready to send.",
+    });
+    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+  }
+
   return (
     <section id="contact" className="py-space-2xl md:py-space-3xl">
       <div className="grid grid-cols-1 gap-space-xl lg:grid-cols-12">
@@ -39,25 +94,32 @@ export default function Contact() {
         <div className="lg:col-span-7">
           <form
             className="card contact-card flex flex-col gap-space-md rounded-2xl p-space-lg md:p-space-xl"
-            onSubmit={(event) => {
-              event.preventDefault();
-              setSent(true);
-            }}
+            onSubmit={handleSubmit}
             aria-label="Contact form"
           >
             <div className="grid grid-cols-1 gap-space-md sm:grid-cols-2">
-              <Field id="fullName" label="Full Name" placeholder="Jane Doe" />
+              <Field
+                id="fullName"
+                label="Full Name"
+                placeholder="Jane Doe"
+                value={form.fullName}
+                onChange={handleChange}
+              />
               <Field
                 id="emailAddr"
                 label="Email Address"
                 placeholder="jane@company.com"
                 type="email"
+                value={form.emailAddr}
+                onChange={handleChange}
               />
             </div>
             <Field
               id="subjectLine"
               label="Subject"
               placeholder="How can we connect?"
+              value={form.subjectLine}
+              onChange={handleChange}
             />
             <div className="flex flex-col gap-1.5">
               <label
@@ -72,14 +134,30 @@ export default function Contact() {
                 placeholder="Tell me about your architectural requirements, stack, timeline..."
                 required
                 rows="4"
+                value={form.messageBody}
+                onChange={handleChange}
               />
             </div>
+            {status.message && (
+              <p
+                className={`font-body text-body-sm ${
+                  status.type === "success" ? "text-tertiary" : "text-primary"
+                }`}
+                role={status.type === "error" ? "alert" : "status"}
+                aria-live="polite"
+              >
+                {status.message}
+              </p>
+            )}
             <button
-              className="gradient-button mt-space-xs w-full font-bold"
+              className="gradient-button mt-space-xs w-full font-bold disabled:cursor-not-allowed disabled:opacity-70"
               type="submit"
+              disabled={status.type === "loading"}
             >
-              {sent ? "Message Sent Successfully!" : "Send Message"}{" "}
-              {!sent && <Icon className="text-body-md">send</Icon>}
+              {status.type === "loading" ? "Sending..." : "Send Message"}{" "}
+              {status.type !== "loading" && (
+                <Icon className="text-body-md">send</Icon>
+              )}
             </button>
           </form>
         </div>
@@ -87,7 +165,7 @@ export default function Contact() {
     </section>
   );
 }
-function Field({ id, label, placeholder, type = "text" }) {
+function Field({ id, label, placeholder, type = "text", value, onChange }) {
   return (
     <div className="flex flex-col gap-1.5">
       <label className="font-body text-label-sm font-semibold" htmlFor={id}>
@@ -99,6 +177,8 @@ function Field({ id, label, placeholder, type = "text" }) {
         placeholder={placeholder}
         required
         type={type}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );

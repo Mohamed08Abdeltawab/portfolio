@@ -62,6 +62,7 @@ export const projects = [
     category: "ASP.NET Core Web API",
     meta: "// July 2026",
     title: "CRUD Application",
+    github: "https://github.com/Mohamed08Abdeltawab/TrainingCenterWebAPI",
     description:
       "Developed a RESTful Web API implementing CRUD operations for a database-driven application.",
     features: [
@@ -80,6 +81,7 @@ export const projects = [
     category: "Windows Forms",
     meta: "// April — May 2026",
     title: "Cashier System (POS)",
+    github: "https://github.com/Mohamed08Abdeltawab/Awlad-Ali-Cashier",
     description:
       "Developed a Windows Forms POS application for managing restaurant sales, products, customers, cashier sessions, and administrative reports.",
     features: [
@@ -104,6 +106,8 @@ export const projects = [
     category: "Desktop Application",
     meta: "// February — April 2026",
     title: "Clinic Management System",
+    github:
+      "https://github.com/Mohamed08Abdeltawab/Clinic-System-with-Windows-Forms",
     description:
       "Developed a desktop clinic management system for managing patients, doctors, appointments, prescriptions, medical services, and billing.",
     features: [

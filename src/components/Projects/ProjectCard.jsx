@@ -1,6 +1,5 @@
 import { Icon } from "../shared/Icon";
 import { TechBadge } from "../shared/TechBadge";
-import { profile } from "../../data/portfolio";
 export default function ProjectCard({ project, index }) {
   return (
     <article className="card project-card">
@@ -41,7 +40,7 @@ export default function ProjectCard({ project, index }) {
           <div className="flex flex-wrap items-center gap-space-md pt-space-sm">
             <a
               className="inline-flex items-center gap-1 font-body text-label-md font-semibold hover:text-primary"
-              href={profile.github}
+              href={project.github}
               target="_blank"
               rel="noreferrer"
             >

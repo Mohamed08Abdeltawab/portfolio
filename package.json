@@ -16,6 +16,5 @@
     "react-dom": "latest",
     "tailwindcss": "^3.4.17",
     "vite": "latest"
-  },
-  "devDependencies": {}
+  }
 }
