@@ -238,6 +238,7 @@ export const certificates = [
     "Programming & Software Development Roadmap",
     "Programming Advices · July 2026",
     "primary",
+    "https://drive.google.com/drive/folders/1O4to7A5zC-EiDi4rkkx2MIdMhUqjkXgX",
   ],
   [
     "verified",
@@ -245,6 +246,7 @@ export const certificates = [
     ".NET Web Development",
     "ITI · September 2025",
     "secondary",
+    "https://drive.google.com/file/d/1kYvor8jpHLA-Qu9Az5tAjkUoK49-kc5p/view",
   ],
 ];
 

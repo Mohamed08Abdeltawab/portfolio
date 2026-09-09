@@ -28,7 +28,7 @@ export default function Navbar() {
       className={`navbar fixed left-0 right-0 top-0 z-50 border-b border-surface-container-highest bg-surface-container-lowest/85 shadow-[var(--shadow-navbar)] backdrop-blur-md transition-all duration-300 ${isScrolled ? "navbar-scrolled" : ""}`}
     >
       <div className="mx-auto flex h-16 max-w-portfolio items-center justify-between gap-space-md px-margin-mobile md:px-space-xl lg:px-margin-desktop">
-        <a href="#about" className="flex shrink-0 items-center gap-space-xs">
+        <a href="#hero" className="flex shrink-0 items-center gap-space-xs">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-container-high font-headline text-headline-sm font-bold text-primary">
             M
           </span>

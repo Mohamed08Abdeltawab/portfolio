@@ -14,7 +14,7 @@ export default function Skills() {
         {skills.map(([icon, title, color, tags], index) => (
           <article
             key={title}
-            className="card stagger-item p-space-lg transition-shadow hover:shadow-md"
+            className="card scratch-card stagger-item p-space-lg transition-shadow hover:shadow-md"
             style={{
               "--stagger-delay": `${index * 80}ms`,
               "--card-accent":

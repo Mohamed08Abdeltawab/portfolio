@@ -15,7 +15,7 @@
     --color-outline-variant: 148 163 184;
     --color-border-alpha: 1;
     --card-border: rgb(226 232 240 / 0.95);
-    --card-scratch: rgb(26 115 232 / 0.035);
+    --card-scratch: rgb(100 116 139 / 0.12);
     --chart-grid: #e2e8f0;
     --shadow-navbar: 0 1px 8px rgb(15 23 42 / 0.08);
     --shadow-hero: 0 8px 20px rgb(15 23 42 / 0.08);
@@ -155,7 +155,7 @@
       box-shadow 280ms ease,
       border-color 200ms ease;
   }
-  .card::before {
+  .scratch-card::before {
     position: absolute;
     inset: 0;
     z-index: 0;

@@ -4,7 +4,7 @@ import { Icon } from "../shared/Icon";
 export default function Github() {
   return (
     <section id="github" className="py-space-2xl">
-      <div className="card rounded-2xl p-space-lg md:p-space-xl">
+      <div className="card scratch-card rounded-2xl p-space-lg md:p-space-xl">
         <div className="mb-space-lg flex flex-col justify-between gap-space-sm sm:flex-row sm:items-center">
           <SectionHeading
             eyebrow="CODE CADENCE"

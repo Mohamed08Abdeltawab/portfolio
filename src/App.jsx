@@ -40,6 +40,9 @@ export default function App() {
               </section>
             </Reveal>
             <Reveal>
+              <About />
+            </Reveal>
+            <Reveal>
               <Projects />
             </Reveal>
             <Reveal>
@@ -47,9 +50,6 @@ export default function App() {
             </Reveal>
             <Reveal>
               <Experience />
-            </Reveal>
-            <Reveal>
-              <About />
             </Reveal>
             <Reveal>
               <Education />
