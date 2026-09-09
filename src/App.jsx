@@ -9,6 +9,7 @@ import Github from "./components/Github/Github";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { metrics } from "./data/portfolio";
+import { Reveal } from "./components/shared/Reveal";
 
 export default function App() {
   return (
@@ -19,28 +20,46 @@ export default function App() {
           <div className="pointer-events-none absolute -right-10 -top-24 -z-0 h-96 w-96 rounded-full bg-secondary-container/10 blur-3xl" />
           <div className="pointer-events-none absolute -left-20 top-48 -z-0 h-80 w-80 rounded-full bg-tertiary-fixed/20 blur-3xl" />
           <div className="relative z-10">
-            <Hero />
-            <section className="mb-space-2xl py-space-md">
-              <div className="grid grid-cols-2 items-center gap-space-md rounded-xl bg-surface-container-lowest p-space-md text-center shadow-sm md:grid-cols-4 md:p-space-lg">
-                {metrics.map(([value, label]) => (
-                  <div key={label} className="flex flex-col">
-                    <strong className="font-headline text-headline-lg text-primary">
-                      {value}
-                    </strong>
-                    <span className="font-body text-label-sm font-medium uppercase tracking-wider text-on-surface-variant">
-                      {label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </section>
-            <Projects />
-            <Skills />
-            <Experience />
-            <About />
-            <Education />
-            <Github />
-            <Contact />
+            <Reveal>
+              <Hero />
+            </Reveal>
+            <Reveal>
+              <section className="mb-space-2xl py-space-md">
+                <div className="grid grid-cols-2 items-center gap-space-md rounded-xl bg-surface-container-lowest p-space-md text-center shadow-sm md:grid-cols-4 md:p-space-lg">
+                  {metrics.map(([value, label]) => (
+                    <div key={label} className="flex flex-col">
+                      <strong className="font-headline text-headline-lg text-primary">
+                        {value}
+                      </strong>
+                      <span className="font-body text-label-sm font-medium uppercase tracking-wider text-on-surface-variant">
+                        {label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </Reveal>
+            <Reveal>
+              <Projects />
+            </Reveal>
+            <Reveal>
+              <Skills />
+            </Reveal>
+            <Reveal>
+              <Experience />
+            </Reveal>
+            <Reveal>
+              <About />
+            </Reveal>
+            <Reveal>
+              <Education />
+            </Reveal>
+            <Reveal>
+              <Github />
+            </Reveal>
+            <Reveal>
+              <Contact />
+            </Reveal>
           </div>
         </div>
       </main>

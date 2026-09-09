@@ -38,7 +38,7 @@ export default function Contact() {
         </div>
         <div className="lg:col-span-7">
           <form
-            className="card flex flex-col gap-space-md rounded-2xl p-space-lg md:p-space-xl"
+            className="card contact-card flex flex-col gap-space-md rounded-2xl p-space-lg md:p-space-xl"
             onSubmit={(event) => {
               event.preventDefault();
               setSent(true);
@@ -67,7 +67,7 @@ export default function Contact() {
                 Project Details &amp; Objectives *
               </label>
               <textarea
-                className="resize-none rounded-lg bg-surface-container-low p-4 font-body text-body-md outline-none transition-all focus:ring-2 focus:ring-primary-container"
+                className="field-control resize-none rounded-lg bg-surface-container-low p-4 font-body text-body-md outline-none focus:ring-2 focus:ring-primary-container"
                 id="messageBody"
                 placeholder="Tell me about your architectural requirements, stack, timeline..."
                 required
@@ -94,7 +94,7 @@ function Field({ id, label, placeholder, type = "text" }) {
         {label} *
       </label>
       <input
-        className="h-12 rounded-lg bg-surface-container-low px-4 font-body text-body-md outline-none transition-all focus:ring-2 focus:ring-primary-container"
+        className="field-control h-12 rounded-lg bg-surface-container-low px-4 font-body text-body-md outline-none focus:ring-2 focus:ring-primary-container"
         id={id}
         placeholder={placeholder}
         required

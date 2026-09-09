@@ -3,7 +3,7 @@ import { Icon } from "../shared/Icon";
 export default function About() {
   return (
     <section id="about" className="py-space-2xl">
-      <div className="card rounded-2xl p-space-lg md:p-space-2xl">
+      <div className="card about-card rounded-2xl p-space-lg md:p-space-2xl">
         <div className="grid grid-cols-1 items-center gap-space-xl lg:grid-cols-12">
           <div className="flex flex-col gap-space-sm lg:col-span-5">
             <span className="section-kicker">// PROFILE</span>

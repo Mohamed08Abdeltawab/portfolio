@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navItems, profile, profileImage } from "../../data/portfolio";
 import { Button } from "../shared/Button";
 import { Icon } from "../shared/Icon";
@@ -7,6 +7,14 @@ export default function Navbar() {
   const [isDark, setIsDark] = useState(() =>
     document.documentElement.classList.contains("dark"),
   );
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 12);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   function toggleTheme() {
     const nextTheme = !isDark;
@@ -16,7 +24,9 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-surface-container-highest bg-surface-container-lowest/85 shadow-[var(--shadow-navbar)] backdrop-blur-md transition-colors duration-200">
+    <header
+      className={`navbar fixed left-0 right-0 top-0 z-50 border-b border-surface-container-highest bg-surface-container-lowest/85 shadow-[var(--shadow-navbar)] backdrop-blur-md transition-all duration-300 ${isScrolled ? "navbar-scrolled" : ""}`}
+    >
       <div className="mx-auto flex h-16 max-w-portfolio items-center justify-between gap-space-md px-margin-mobile md:px-space-xl lg:px-margin-desktop">
         <a href="#about" className="flex shrink-0 items-center gap-space-xs">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-container-high font-headline text-headline-sm font-bold text-primary">
@@ -38,7 +48,7 @@ export default function Navbar() {
             <a
               key={id}
               href={`#${id}`}
-              className="font-body text-label-md text-on-surface-variant transition-colors hover:text-on-surface"
+              className="nav-link font-body text-label-md text-on-surface-variant transition-colors hover:text-on-surface"
             >
               {label}
             </a>
@@ -48,7 +58,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant transition-colors duration-200 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+            className="theme-toggle flex h-9 w-9 items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
             aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
             title={`Switch to ${isDark ? "light" : "dark"} mode`}
           >

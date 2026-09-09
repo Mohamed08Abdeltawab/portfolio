@@ -9,8 +9,12 @@ export default function Experience() {
         title="Training & Internships"
       />
       <div className="relative space-y-space-xl border-l-2 border-surface-container-highest pl-6 md:pl-8">
-        {experience.map((item) => (
-          <article key={item.role} className="relative">
+        {experience.map((item, index) => (
+          <article
+            key={item.role}
+            className="relative stagger-item"
+            style={{ "--stagger-delay": `${index * 100}ms` }}
+          >
             <span
               className={`absolute -left-[33px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-surface-container-lowest ring-4 ring-${item.color}`}
             >

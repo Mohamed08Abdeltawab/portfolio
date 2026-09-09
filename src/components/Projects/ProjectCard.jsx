@@ -3,7 +3,7 @@ import { TechBadge } from "../shared/TechBadge";
 import { profile } from "../../data/portfolio";
 export default function ProjectCard({ project, index }) {
   return (
-    <article className="card overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+    <article className="card project-card">
       <div
         className={`h-1.5 w-full bg-gradient-to-r ${index === 1 ? "from-secondary-container to-tertiary-fixed" : index === 2 ? "from-primary-container to-secondary-container" : "from-primary-container via-secondary-container to-tertiary-fixed"}`}
       />
@@ -52,7 +52,7 @@ export default function ProjectCard({ project, index }) {
         <div className="lg:col-span-5">
           <div className="relative overflow-hidden rounded-xl bg-surface-container-low shadow-sm">
             <img
-              className="h-64 w-full object-cover"
+              className="project-image h-64 w-full object-cover"
               src={project.image}
               alt={project.title}
             />
