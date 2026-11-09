@@ -1,19 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mohamed Abdeltawab — Back-end .NET Developer portfolio"
+      content="Mohamed Abdeltawab — Back-End & Full-Stack .NET Developer specializing in C#, ASP.NET Core Web APIs, Entity Framework Core, SQL Server, and Clean Architecture."
     />
+    <meta
+      name="keywords"
+      content="Mohamed Abdeltawab, .NET Developer, Backend Developer, Full-Stack .NET, C#, ASP.NET Core, Entity Framework Core, SQL Server, Egypt"
+    />
+    <meta name="author" content="Mohamed Abdeltawab" />
+    <meta property="og:title" content="Mohamed Abdeltawab — Back-End & Full-Stack .NET Engineer" />
+    <meta
+      property="og:description"
+      content="Building resilient RESTful APIs, database-driven systems, and enterprise desktop applications with C# and .NET."
+    />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>Mohamed Abdeltawab // Back-end .NET Developer</title>
+    <title>Mohamed Abdeltawab — .NET Backend & Systems Engineer</title>
   </head>
   <body>
     <div id="root"></div>
@@ -23,10 +34,9 @@
         const prefersDark = window.matchMedia(
           "(prefers-color-scheme: dark)",
         ).matches;
-        document.documentElement.classList.toggle(
-          "dark",
-          savedTheme === "dark" || (!savedTheme && prefersDark),
-        );
+        const shouldBeDark =
+          savedTheme === "dark" || (!savedTheme && (prefersDark || true));
+        document.documentElement.classList.toggle("dark", shouldBeDark);
       })();
     </script>
     <script type="module" src="/src/main.jsx"></script>

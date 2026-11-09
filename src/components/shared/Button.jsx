@@ -1,16 +1,33 @@
 import { Icon } from "./Icon";
-export function Button({ children, href = "#", icon, secondary = false }) {
+
+export function Button({
+  children,
+  href = "#",
+  icon,
+  secondary = false,
+  external = false,
+  className = "",
+  onClick,
+  id,
+}) {
+  const isExternal = external || href.startsWith("http");
   return (
     <a
-      className={
-        secondary
-          ? "interactive-button inline-flex items-center gap-2 rounded-full bg-surface-container-lowest px-space-lg py-3 font-body text-label-md text-on-surface shadow-sm hover:text-primary"
-          : "gradient-button"
-      }
+      id={id}
+      onClick={onClick}
+      className={`group ${
+        secondary ? "secondary-button" : "primary-button"
+      } ${className}`}
       href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
     >
-      {icon && <Icon className="text-body-md">{icon}</Icon>}
-      {children}
+      <span>{children}</span>
+      {icon && (
+        <Icon className="text-[18px] transition-transform duration-200 group-hover:translate-x-0.5">
+          {icon}
+        </Icon>
+      )}
     </a>
   );
 }
